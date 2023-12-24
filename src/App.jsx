@@ -17,7 +17,7 @@ function App() {
     <Provider>
       <BrowserRouter>
         <Routes>
-          <Route path="/home" element={<>
+          <Route path="/" element={<>
             <Header />
             <ProductList />
             <ShoppingCart />

@@ -23,9 +23,7 @@ function ShoppingCart() {
         {formatCurrency(totalPrice)}
       </div>
       <Link to="/login">
-        <button className="button-finish">
-          <FaArrowRight />
-        </button>
+        { cartItems.length > 0 && <button className="button-finish"><FaArrowRight /></button> } 
       </Link>   
     </section>
   );
