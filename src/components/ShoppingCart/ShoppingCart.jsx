@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import './ShoppingCart.css';
-import CartItens from '../CartItems/CartItems';
+import CartItems from '../CartItems/CartItems';
 import AppContext from '../../context/AppContext';
 import formatCurrency from '../../utilities/formatCurrency';
 import { FaArrowRight } from 'react-icons/fa';
@@ -17,7 +17,7 @@ function ShoppingCart() {
 
     <section className={`cart ${isCartVisible ? 'cart-active' : ''}`}>
       <div className="cart-items">
-        { cartItems.map ((cartItem) => <CartItens key= {cartItem.id} data={cartItem} />)}
+        { cartItems.map ((cartItem) => <CartItems key= {cartItem.id} data={cartItem} />)}
       </div>
       <div className="cart-resume">
         {formatCurrency(totalPrice)}
